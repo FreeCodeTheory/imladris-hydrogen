@@ -173,9 +173,9 @@ export default function Homepage() {
     title: "Augmentez votre chiffre d'affaire en créant un site web adapté pour vos clients",
     subtitle: "En utilisant une démarche UX design, vous augmenterez considérablement vos taux de conversion et de rétention.",
     actions: [
-      { text: 'Action 1', link: '/lien-1' },
-      { text: 'Action 2', link: '/lien-2' },
-      { text: 'Action 3', link: '/lien-3' },
+      { text: 'Créer son expérience digitale', link: '/lien-1' },
+      { text: 'Créer son site web', link: '/lien-2' },
+      { text: 'Contacter nous', link: '/lien-3' },
     ]
   };
 

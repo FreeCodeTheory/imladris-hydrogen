@@ -27,9 +27,9 @@ export default function AgenceSolutionsPage() {
     const solutionIntroContent = [
         {
         id: 1,
-        category: 'Solutions',
-        title: 'Page Solution',
-        subtitle: "Notre agence web imagine des expériences digitales pertinentes pour vos utilisateurs et pour votre business. Que ce soit pour la création ou la refonte d'un site web, d'une application mobile, d’un site e-commerce, d’un site Shopify ou d'une progressive web app, nos spécialistes en UX Design, design d'interfaces, développement web et mobile conçoivent votre site en plaçant l'utilisateur au cœur de la démarche.",
+        category: '',
+        title: 'Nous créons des solutions digitales qui répondent à vos besoins',
+        subtitle: '',
         },
     ];
     const solutionCardContent = [
@@ -107,15 +107,18 @@ export default function AgenceSolutionsPage() {
                 button={heroBannerContent.button}
                 image={heroBannerContent.image}
             />
+            <div className='mb-5'></div>
             <Solutions 
                 solutionIntroContent={solutionIntroContent}
                 solutionCardContent={solutionCardContent}
             />
+            <div className='mb-5'></div>
             <HeroAction 
                 title={heroActionContent.title} 
                 subtitle={heroActionContent.subtitle}
                 actions={heroActionContent.actions}
             />
+            <div className='mb-5'></div>
         </Fragment>
     );
 }

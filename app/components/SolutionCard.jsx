@@ -1,6 +1,6 @@
 export default function SolutionCard({title, text1, textColor, text2, image, button}) {
 return (
-<div className="card flex flex-col justify-between items-start gap-10 rounded-[50px] bg-[#F6F6F6] border border-transparent p-[40px] hover:border-black cursor-pointer">
+<div className="card flex flex-col justify-between items-start gap-10 rounded-[50px] bg-gray-200 border border-transparent p-[40px] hover:border-black cursor-pointer">
     {image && <img className="mb-[30px]" src={image} alt={title} />}
     <h3 className="text-[20px] font-bold max-w-prose">
         {text1} 

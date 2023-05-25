@@ -6,7 +6,8 @@ return (
             <p className="text-[16px] tracking-[0.01em] leading-[28px] mt-4 px-[440px]">{subtitle}</p>
             <div className="flex justify-between mt-[60px]">
                 {actions.map((action, index) => (
-                    <a href={action.link} className="rounded-full bg-white text-black mx-2 px-[40px] py-[20px] w-full" key={index}>
+                    <a href={action.link} className="rounded-full bg-white w-full mx-2 px-[40px] py-[20px]
+                                                        font-medium text-gray-900 text-[20px] tracking-[0.02em] leading-[24px]" key={index}>
                         {action.text}
                     </a>
                 ))}
