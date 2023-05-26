@@ -16,7 +16,7 @@ export default function Solutions({solutionIntroContent, solutionCardContent}) {
                 ))}
             </section>
             <section className="flex flex-col items-center px-[120px]">
-            <div className="mb-[5%] grid grid-cols-3 grid-rows-2 gap-x-2 gap-y-20">
+            <div className="grid grid-cols-3 grid-rows-2 gap-x-2 gap-y-2">
                 {solutionCardContent.map((card) => (
                 <SolutionCard
                     key={card.id}
