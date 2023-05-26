@@ -1,47 +1,51 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const Card = ({
+export function Card({
     number,
     title,
     content,
     buttonText,
-    backgroundColor,
-    titleColor,
-}) => {
+    image,
+    bgClass,
+    titleClass,
+    textClass,
+    btnClass,
+    btnHoverClass,
+    border,
+    }) {
+
     const [isHovered, setIsHovered] = useState(false);
 
     return (
         <div
-            className="flex flex-col justify-between items-start gap-4 rounded-[50px] p-[40px]"
-            style={{
-                backgroundColor: backgroundColor,
-            }}
+        className={`flex flex-col justify-between items-start gap-4 rounded-[50px] p-[40px] ${bgClass} border-[1px] border-transparent
+                    ${border ? 'hover:border-[1px] hover:border-[#00A8E8]' : 'border-none'} `}
         >
+        {image && <img className="mb-[30px]" src={image} alt={title} />}
+        {number && (
             <p className="font-bold text-[20px] tracking-[0.01em] leading-[32px]">
-                {number}
+            {number}
             </p>
-            <h3
-                className="font-bold text-[20px] tracking-[0.01em] leading-[32px]"
-                style={{ color: titleColor }}
-            >
-                {title}
+        )}
+        {title && (
+            <h3 className={`font-bold text-[20px] tracking-[0.01em] leading-[32px] ${titleClass}`}>
+            {title}
             </h3>
-            <p className="text-[16px] tracking-[0.01em] leading-[28px]">
-                {content}
+        )}
+        {content && (
+            <p className={`text-[16px] tracking-[0.01em] leading-[28px] ${textClass}`}>
+            {content}
             </p>
+        )}
+        {buttonText && (
             <button
-                className="border rounded-full border-gray-700 px-[30px] py-[16px] my-[4%]"
-                style={{
-                    backgroundColor: isHovered ? titleColor : "transparent",
-                    color: isHovered ? "black" : "inherit",
-                }}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
+            className={`border rounded-full px-[30px] py-[16px] my-[4%] ${btnClass} ${isHovered && btnHoverClass}`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
             >
-                <a href="#" className="font-medium text-[16px] tracking-[0.02em] leading-[20px]">{buttonText}</a>
+            <a href="#" className="font-medium text-[16px] tracking-[0.02em] leading-[20px]">{buttonText}</a>
             </button>
+        )}
         </div>
     );
 };
-
-export default Card;

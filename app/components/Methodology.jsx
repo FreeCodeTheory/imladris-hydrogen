@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useState } from 'react';
-import Card from './Card';
+import { Card } from './Card';
 
-const Methodology = () => {
+export function Methodology() {
     const sectionRef = useRef();  // Ref pour la section
     const ulRef = useRef();  // Ref pour la liste ul
     const [activeLink, setActiveLink] = useState(null);
@@ -149,5 +149,3 @@ const Methodology = () => {
         </section>
     );
 };
-
-export {Methodology};

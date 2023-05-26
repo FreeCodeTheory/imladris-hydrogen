@@ -1,4 +1,4 @@
-export function ReferenceCard({title, image, client, subtitle}) {
+export function ReferenceContent({title, image, client, subtitle}) {
     return (
         <>
             <div className="flex flex-col gap-2">
@@ -12,6 +12,4 @@ export function ReferenceCard({title, image, client, subtitle}) {
             </div>
         </>
     );
-    }
-    
-    export default ReferenceCard;
+}

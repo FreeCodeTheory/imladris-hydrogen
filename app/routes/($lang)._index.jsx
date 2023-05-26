@@ -15,7 +15,13 @@ import PinkIcon from '../assets/pink-icon.svg';
 import RedIcon from '../assets/red-icon.svg';
 import GreenIcon from '../assets/green-icon.svg';
 
-import phone from '../assets/phone.svg';
+import Avatar from '../assets/avatar.png';
+import Airbnb from '../assets/airbnb.svg';
+
+import Phone from '../assets/phone.svg';
+import DoublePhone from '../assets/double-phone.svg';
+import ComputerPhone from '../assets/computer-phone.svg';
+import Tablet from '../assets/tablet.svg';
 
 export const headers = routeHeaders;
 
@@ -100,75 +106,243 @@ export default function Homepage() {
     title: "Concepteurs d’expériences digitales qui propulsent votre business",
     subtitle: "Depuis plus de 3 ans, notre agence web place l’utilisateur au centre de la création de site afin de faire rayonner votre marque. Avec l’UX design, nous réalisons des expériences digitales engageantes pour vos clients.",
     button: "Propulser mon business",
-    image: phone,
+    image: Phone,
     width: 100,
     mb: -32,
     mr: -14
   };
-  const solutionIntroContent = [
+  const solutionsIntroContent = [
     {
-      id: 1,
-      category: 'Solutions',
-      title: 'Créer votre solution et atteignez vos objectifs commerciaux et marketing',
-      subtitle: "Notre agence web imagine des expériences digitales pertinentes pour vos utilisateurs et pour votre business. Que ce soit pour la création ou la refonte d'un site web, d'une application mobile, d’un site e-commerce, d’un site Shopify ou d'une progressive web app, nos spécialistes en UX Design, design d'interfaces, développement web et mobile conçoivent votre site en plaçant l'utilisateur au cœur de la démarche.",
+    id: 1,
+    category: '',
+    title: 'Nous créons des solutions digitales qui répondent à vos besoins',
+    subtitle: '',
     },
   ];
-  const solutionCardContent = [
+  const solutionsCardContent = [
+      {
+          id: 1,
+          title: 'Ux Design',
+          text1: 'Optimiser et améliorer l’',
+          textColor: 'Ux Design ',
+          text2: ' de votre projet et booster votre business',
+          button: 'En savoir plus',
+          image: BlueIcon,
+          border: true,
+      },
+      {
+          id: 2,
+          title: 'Design System',
+          text1: 'Créer votre ',
+          textColor: 'Design System ',
+          text2: 'dans un budget maîtrisé et améliorer votre productivité',
+          button: 'En savoir plus',
+          image: PurpleIcon,
+          border: true,
+      },
+      {
+          id: 3, 
+          title: 'MvP / Prototype',
+          text1: 'Créer votre ',
+          textColor: 'MvP / Prototype ',
+          text2: 'dans un budget maîtrisé et propulser votre marque',
+          button: 'En savoir plus',
+          image: YellowIcon,
+          border: true,
+      },
+      {
+          id: 4,
+          title: 'Site Web',
+          text1: 'Créer un ',
+          textColor: 'Site Web ',
+          text2: 'et augmentez vos taux de conversions et rétention',
+          button: 'En savoir plus',
+          image: PinkIcon,
+          border: true,
+      },
+      {
+          id: 5,
+          title: 'e-Commerce Shopify',
+          text1: 'Créer votre ',
+          textColor: 'e-Commerce Shopify ',
+          text2: 'et booster les ventes de votre marque',
+          button: 'En savoir plus',
+          image: GreenIcon,
+          border: true,
+      },
+      {
+          id: 6,
+          title: 'Progressive Web App',
+          text1: 'Créer votre ',
+          textColor: 'Progressive Web App ',
+          text2: 'et augmentez votre satisfaction client',
+          button: 'En savoir plus',
+          image: RedIcon,
+          border: true,
+      },
+  ];
+  const referencesIntroContent = [   
     {
         id: 1,
-        title: 'Ux Design',
-        text1: 'Optimiser et améliorer l’',
-        textColor: 'Ux Design ',
-        text2: ' de votre projet et booster votre business',
+        category: 'Références',
+        title: 'Des expériences engageantes',
+        subtitle: "Depuis 2020, notre agence web met en synergie son expertise en UX design et développement web et mobile pour élaborer des sites internet extrêmement performants. Notre secret ? Mettre en collaboration des individus talentueux, motivés pour relever des défis audacieux au service de l'expérience utilisateur (UX) et du retour sur investissement (ROI).",
+    },
+  ];
+  const referencesCardContent = [
+    {
+        id: 1,
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
         button: 'En savoir plus',
-        image: BlueIcon,
+        image: DoublePhone,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
     },
     {
         id: 2,
-        title: 'Design System',
-        text1: 'Créer votre ',
-        textColor: 'Design System ',
-        text2: 'dans un budget maîtrisé et améliorer votre productivité',
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
         button: 'En savoir plus',
-        image: PurpleIcon,
+        image: ComputerPhone,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
     },
     {
-        id: 3, 
-        title: 'MvP / Prototype',
-        text1: 'Créer votre ',
-        textColor: 'MvP / Prototype ',
-        text2: 'dans un budget maîtrisé et propulser votre marque',
+        id: 3,
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
         button: 'En savoir plus',
-        image: YellowIcon,
+        image: Tablet,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
     },
     {
         id: 4,
-        title: 'Site Web',
-        text1: 'Créer un ',
-        textColor: 'Site Web ',
-        text2: 'et augmentez vos taux de conversions et rétention',
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
         button: 'En savoir plus',
-        image: PinkIcon,
+        image: DoublePhone,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
     },
     {
         id: 5,
-        title: 'e-Commerce Shopify',
-        text1: 'Créer votre ',
-        textColor: 'e-Commerce Shopify ',
-        text2: 'et booster les ventes de votre marque',
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
         button: 'En savoir plus',
-        image: GreenIcon,
+        image: DoublePhone,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
     },
     {
         id: 6,
-        title: 'Progressive Web App',
-        text1: 'Créer votre ',
-        textColor: 'Progressive Web App ',
-        text2: 'et augmentez votre satisfaction client',
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
         button: 'En savoir plus',
-        image: RedIcon,
+        image: DoublePhone,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
+    },
+    {
+        id: 7,
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
+        button: 'En savoir plus',
+        image: DoublePhone,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
+    },
+    {
+        id: 8,
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
+        button: 'En savoir plus',
+        image: ComputerPhone,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
+    },
+    {
+        id: 9,
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
+        button: 'En savoir plus',
+        image: Tablet,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
+    },
+    {
+        id: 10,
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
+        button: 'En savoir plus',
+        image: DoublePhone,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
+    },
+    {
+        id: 11,
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
+        button: 'En savoir plus',
+        image: DoublePhone,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
+    },
+    {
+        id: 12,
+        title: 'Créer votre e-commerce et booster les ventes de votre marque',
+        button: 'En savoir plus',
+        image: DoublePhone,
+        client: "Nom Client",
+        subtitle: "Augmenter les ventes de produit en ligne en créant une expérience sur-mesure."
     },
   ];
+  const expertisesCardContent = [
+		{
+		title: 'UX Design',
+		content: [
+			{
+			number: '01',  
+			title: 'Etudes et conseil UX',
+			text: 'Questionnez vos utilisateurs pour comprendre ce qu’ils souhaitent afin d’augmenter votre rétention.',
+			buttonText: 'En savoir plus',
+			bgClass: 'bg-green-300',
+			titleClass: 'text-black',
+			textClass: 'text-black',
+			btnClass: 'border-gray-700 text-gray-700',
+			btnHoverClass: 'bg-gray-700 text-white',
+			},
+			{
+			number: '02',
+			title: 'UX design et conception',
+			text: 'Concevez des interfaces intuitives, percutantes et adaptées pour vos utilisateurs.',
+			buttonText: 'En savoir plus',
+			bgClass: 'bg-pink-300',
+			titleClass: 'text-black',
+			textClass: 'text-black',
+			btnClass: 'border-gray-700 text-gray-700',
+			btnHoverClass: 'bg-gray-700 text-white',
+			},
+		],
+		},
+		{
+		title: 'Développement',
+		content: [
+			{
+			number: '03',
+			title: 'Développement web & app',
+			text: 'Optez pour les bonnes technologies et réalisez un site sécurisé et performant qui séduira vos clients.',
+			buttonText: 'En savoir plus',
+			bgClass: 'bg-gray-200',
+			titleClass: 'text-black',
+			textClass: 'text-black',
+			btnClass: 'border-gray-700 text-gray-700',
+			btnHoverClass: 'bg-gray-700 text-white',
+			},
+			{
+			number: '04',
+			title: 'Audit technique & TMA',
+			text: 'Analysez votre site et améliorez ses performances afin d’accroître la satisfaction client.',
+			buttonText: 'En savoir plus',
+			bgClass: 'bg-yellow-300',
+			titleClass: 'text-black',
+			textClass: 'text-black',
+			btnClass: 'border-gray-700 text-gray-700',
+			btnHoverClass: 'bg-gray-700 text-white',
+			},
+		],
+		},
+	];
   const heroActionContent = {
     title: "Augmentez votre chiffre d'affaire en créant un site web adapté pour vos clients",
     subtitle: "En utilisant une démarche UX design, vous augmenterez considérablement vos taux de conversion et de rétention.",
@@ -178,19 +352,74 @@ export default function Homepage() {
       { text: 'Contacter nous', link: '/lien-3' },
     ]
   };
+  const testimonialsContent = [
+    {
+        avatar: Avatar,
+        text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
+        logo: Airbnb,
+    },
+    {
+        avatar: Avatar,
+        text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
+        logo: Airbnb,
+    },
+    {
+        avatar: Avatar,
+        text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
+        logo: Airbnb,
+    },
+    {
+        avatar: Avatar,
+        text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
+        logo: Airbnb,
+    },
+    {
+        avatar: Avatar,
+        text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
+        logo: Airbnb,
+    },
+    {
+        avatar: Avatar,
+        text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
+        logo: Airbnb,
+    },
+    {
+        avatar: Avatar,
+        text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
+        logo: Airbnb,
+    },
+    {
+        avatar: Avatar,
+        text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
+        logo: Airbnb,
+    },
+    {
+        avatar: Avatar,
+        text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
+        logo: Airbnb,
+    },
+    {
+        avatar: Avatar,
+        text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
+        logo: Airbnb,
+    },
+];
 
   return (
     <>
       <HeroBanner {...heroBannerContent} />
       <Solutions 
-        solutionIntroContent={solutionIntroContent}
-        solutionCardContent={solutionCardContent}
+        solutionsIntroContent={solutionsIntroContent}
+        solutionsCardContent={solutionsCardContent}
       />
-      <References />
-      <Expertises />
-      <Testimonials />
+      <References 
+        {...referencesIntroContent}
+        {...referencesCardContent}
+      />
+      <Expertises {...expertisesCardContent}/>
+      <Testimonials slides={testimonialsContent} />
       <HeroAction {...heroActionContent} />
-      <Collapsible />
+      <Collapsible/>
     </>
   );
 }

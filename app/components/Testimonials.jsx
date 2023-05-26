@@ -2,65 +2,10 @@ import { useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
-import Avatar from '../assets/avatar.png';
-import Airbnb from '../assets/airbnb.svg';
+import TestimonialCard from './TestimonialCard';
 import Era from '../assets/era.svg';
 
-import TestimonialCard from './TestimonialCard';
-
-export const Testimonials = () => {
-    const slides = [
-        {
-            avatar: Avatar,
-            text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
-            logo: Airbnb,
-        },
-        {
-            avatar: Avatar,
-            text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
-            logo: Airbnb,
-        },
-        {
-            avatar: Avatar,
-            text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
-            logo: Airbnb,
-        },
-        {
-            avatar: Avatar,
-            text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
-            logo: Airbnb,
-        },
-        {
-            avatar: Avatar,
-            text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
-            logo: Airbnb,
-        },
-        {
-            avatar: Avatar,
-            text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
-            logo: Airbnb,
-        },
-        {
-            avatar: Avatar,
-            text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
-            logo: Airbnb,
-        },
-        {
-            avatar: Avatar,
-            text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
-            logo: Airbnb,
-        },
-        {
-            avatar: Avatar,
-            text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
-            logo: Airbnb,
-        },
-        {
-            avatar: Avatar,
-            text: 'Beau travail d’équipe ! 👌 Merci à tous pour votre investissement dans ce projet et votre flexibilité avec les délais de lancement imposés. ',
-            logo: Airbnb,
-        },
-    ];
+export const Testimonials = ({ slides }) => {
 
     const slideGroups = [];
     for (let i = 0; i < slides.length; i += 4) {

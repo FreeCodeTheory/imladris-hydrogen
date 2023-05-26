@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import Card from './Card';
+import { useEffect, useRef } from "react";
+import { Card } from './Card';
 
-const ExpertiseAgence = () => {
+export function ExpertiseAgence({expertiseAgenceContent}) {
     const sectionRef = useRef();  // Ref pour la section
     const ulRef = useRef();  // Ref pour la liste ul
     useEffect(() => {
@@ -25,67 +25,16 @@ const ExpertiseAgence = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
-    const data = {
-    mainTitle: 'Nous sommes experts en UX design & en développement web',
-    links: ['Études & conseil UX', 'UX design & conception', 'Développement web & app', 'Audit technique & TMA'],
-    subsections: [
-        {
-        subTitle: 'Études & Conseil UX',
-        cards: [
-                { title: 'Audit UX', titleColor: '#D0EA59', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Benchmark UX', titleColor: '#D959AF', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Études utilisateurs', titleColor: '#EBAC00', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Audit UX', titleColor: '#D0EA59', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Benchmark UX', titleColor: '#D959AF', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Études utilisateurs', titleColor: '#EBAC00', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-            ],
-        },
-        {
-        subTitle: 'UX Design & Conception',
-        cards: [
-                { title: 'Audit UX', titleColor: '#D0EA59', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Benchmark UX', titleColor: '#D959AF', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Études utilisateurs', titleColor: '#EBAC00', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Audit UX', titleColor: '#D0EA59', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Benchmark UX', titleColor: '#D959AF', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Études utilisateurs', titleColor: '#EBAC00', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-            ],
-        },
-        {
-        subTitle: 'Développement web & app',
-        cards: [
-                { title: 'Audit UX', titleColor: '#D0EA59', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Benchmark UX', titleColor: '#D959AF', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Études utilisateurs', titleColor: '#EBAC00', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Audit UX', titleColor: '#D0EA59', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Benchmark UX', titleColor: '#D959AF', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Études utilisateurs', titleColor: '#EBAC00', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-            ],
-        },
-        {
-        subTitle: 'Audit technique & TMA',
-        cards: [
-                { title: 'Audit UX', titleColor: '#D0EA59', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Benchmark UX', titleColor: '#D959AF', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Études utilisateurs', titleColor: '#EBAC00', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Audit UX', titleColor: '#D0EA59', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Benchmark UX', titleColor: '#D959AF', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-                { title: 'Études utilisateurs', titleColor: '#EBAC00', content: 'Quels sont les problèmes ergonomiques de votre site et application ?', buttonText: 'En savoir plus' },
-            ],
-        },
-        // Add more subsections as needed.
-    ],
-    };
 
     return (
         <section className="bg-gray-900 text-gray-50 rounded-[50px] py-[60px] px-[80px] relative" ref={sectionRef}>
             <h1 className="font-bold text-[50px] tracking-[0.01em] leading-[61px] 
-                            w-[40%] mb-[80px]">{data.mainTitle}</h1>
+                            w-[40%] mb-[80px]">{expertiseAgenceContent.mainTitle}</h1>
         
             <div className="flex justify-between">
                 <div className="w-1/3" style={{ height: 'fit-content' }}>
                     <ul className="sticky-top-0" ref={ulRef}>
-                        {data.links.map((link, i) => (
+                        {expertiseAgenceContent.links.map((link, i) => (
                             <li key={i} className="py-[20px] font-medium text-[16px] tracking-[0.02em] leading-[20px] w-fit cursor-pointer hover:text-green-50">
                                 <a href={`#${link.replace(/ /g, '-').toLowerCase()}`}>{link}</a>
                             </li>
@@ -93,7 +42,7 @@ const ExpertiseAgence = () => {
                     </ul>
                 </div>
                 <div className="flex flex-col justify-between w-2/3">
-                    {data.subsections.map((subsection, i) => (
+                    {expertiseAgenceContent.subsections.map((subsection, i) => (
                     <div key={i} className="flex flex-col mb-6">
                         <div className='flex justify-between pb-[20px]'>
                             <div className='border border-gray-700 rounded-full px-[8px] py-[4px] gap-10 drop-shadow-primary'>
@@ -122,5 +71,3 @@ const ExpertiseAgence = () => {
         </section>
     );
 };
-
-export {ExpertiseAgence};
