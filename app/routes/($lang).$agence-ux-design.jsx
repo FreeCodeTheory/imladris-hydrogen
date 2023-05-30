@@ -230,8 +230,8 @@ export default function AgenceUxDesignPage() {
                 solutionsCardContent={solutionsCardContent}
             />
             <References 
-                {...referencesIntroContent}
-                {...referencesCardContent}
+                referencesIntroContent={referencesIntroContent} 
+                referencesCardContent={referencesCardContent} 
             />
             <HeroAction 
                 title={heroActionContent.title} 

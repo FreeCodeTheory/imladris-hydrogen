@@ -9,7 +9,7 @@ import YellowIcon from '../assets/yellow-icon.svg';
 import PinkIcon from '../assets/pink-icon.svg';
 import RedIcon from '../assets/red-icon.svg';
 import GreenIcon from '../assets/green-icon.svg';
- 
+
 import ComputerPhone from '../assets/computer-phone.svg';
 
 export default function AgenceSolutionsPage() {

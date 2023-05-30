@@ -1,5 +1,5 @@
 import { SolutionIntro } from './SolutionIntro.jsx';
-import {Card } from './Card.jsx';
+import {Card} from './Card.jsx';
 
 export default function Solutions({ solutionsIntroContent, solutionsCardContent }) {
     return (
@@ -19,11 +19,27 @@ export default function Solutions({ solutionsIntroContent, solutionsCardContent 
                     {solutionsCardContent?.map(content => (
                         <Card
                             key={content.id}
-                            title={content.title}
-                            content={`${content.text1} ${content.textColor} ${content.text2}`}
-                            buttonText={content.button}
+                            bgClass={content.bgClass}
+                            borderClass={content.borderClass}
+                            borderHoverClass={content.borderHoverClass}
                             image={content.image}
-                            border={content.border}
+                            number={content.number}
+                            title={content.title}
+                            titleClass={content.titleClass}
+                            titleHoverClass={content.titleHoverClass}
+                            content={content.content}
+                            contentClass={content.contentClass}
+                            text1={content.text1}
+                            textColor={content.textColor}
+                            textColorClass={content.textColorClass}
+                            text2={content.text2}
+                            buttonClass={content.buttonClass}
+                            buttonHoverClass={content.buttonHoverClass}
+                            buttonBorderClass={content.buttonBorderClass}
+                            buttonBorderHoverClass={content.buttonBorderHoverClass}
+                            buttonText={content.buttonText}
+                            buttonTextClass={content.buttonTextClass}
+                            buttonTextHoverClass={content.buttonTextHoverClass}
                         />
                     ))}
                 </div>

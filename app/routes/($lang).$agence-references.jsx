@@ -3,7 +3,10 @@ import {HeroBanner} from '../components/HeroBanner';
 import {References} from '../components/References';
 import {HeroAction} from '../components/HeroAction';
 
+import Phone from '../assets/phone.svg';
+import DoublePhone from '../assets/double-phone.svg';
 import ComputerPhone from '../assets/computer-phone.svg';
+import Tablet from '../assets/tablet.svg';
 
 export default function AgenceReferencesPage() {
     const heroBannerContent = {
@@ -134,8 +137,8 @@ export default function AgenceReferencesPage() {
                 image={heroBannerContent.image}
             />
             <References 
-                {...referencesIntroContent}
-                {...referencesCardContent}
+                referencesIntroContent={referencesIntroContent} 
+                referencesCardContent={referencesCardContent} 
             />
             <HeroAction 
                 title="Augmentez votre chiffre d'affaire en créant un site web adapté pour vos clients" 

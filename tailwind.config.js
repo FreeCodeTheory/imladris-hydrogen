@@ -30,7 +30,8 @@ export default {
         'green-50': '#E2F87F',
         'green-100': '#D0EA59',
         'pink-200': '#D959AF', 
-        'pink-300': '#D90368', 
+        'pink-300': '#D90368',
+        'red-200': '#FF7967',
         'yellow-400': '#EBAC00',
       },
       screens: {

@@ -114,7 +114,7 @@ export default function Homepage() {
   const solutionsIntroContent = [
     {
     id: 1,
-    category: '',
+    category: 'Solutions',
     title: 'Nous créons des solutions digitales qui répondent à vos besoins',
     subtitle: '',
     },
@@ -122,63 +122,71 @@ export default function Homepage() {
   const solutionsCardContent = [
       {
           id: 1,
-          title: 'Ux Design',
+          bgClass: 'bg-gray-200',
+          borderClass: 'border-[0.5px] border-gray-50',
+          borderHoverClass: 'border-gray-900',
+          image: BlueIcon,
           text1: 'Optimiser et améliorer l’',
           textColor: 'Ux Design ',
+          textColorClass: 'text-blue-500',
           text2: ' de votre projet et booster votre business',
-          button: 'En savoir plus',
-          image: BlueIcon,
-          border: true,
+          buttonBorderClass: 'border-gray-900',
+          buttonText: 'En savoir plus',
       },
       {
           id: 2,
-          title: 'Design System',
+          bgClass: 'bg-gray-200',
+          image: PurpleIcon,
           text1: 'Créer votre ',
           textColor: 'Design System ',
+          textColorClass: 'text-pink-300',
           text2: 'dans un budget maîtrisé et améliorer votre productivité',
-          button: 'En savoir plus',
-          image: PurpleIcon,
-          border: true,
+          buttonBorderClass: 'border-gray-900',
+          buttonText: 'En savoir plus',
       },
       {
-          id: 3, 
-          title: 'MvP / Prototype',
+          id: 3,
+          bgClass: 'bg-gray-200',
+          image: YellowIcon,
           text1: 'Créer votre ',
           textColor: 'MvP / Prototype ',
+          textColorClass: 'text-yellow-400',
           text2: 'dans un budget maîtrisé et propulser votre marque',
-          button: 'En savoir plus',
-          image: YellowIcon,
-          border: true,
+          buttonBorderClass: 'border-gray-900',
+          buttonText: 'En savoir plus',
       },
       {
           id: 4,
-          title: 'Site Web',
+          bgClass: 'bg-gray-200',
+          image: PinkIcon,
           text1: 'Créer un ',
           textColor: 'Site Web ',
+          textColorClass: 'text-pink-200',
           text2: 'et augmentez vos taux de conversions et rétention',
-          button: 'En savoir plus',
-          image: PinkIcon,
-          border: true,
+          buttonBorderClass: 'border-gray-900',
+          buttonText: 'En savoir plus',
       },
       {
           id: 5,
-          title: 'e-Commerce Shopify',
+          bgClass: 'bg-gray-200',
+          image: GreenIcon,
           text1: 'Créer votre ',
           textColor: 'e-Commerce Shopify ',
+          textColorClass: 'text-green-400',
           text2: 'et booster les ventes de votre marque',
-          button: 'En savoir plus',
-          image: GreenIcon,
-          border: true,
+          buttonBorderClass: 'border-gray-900',
+          buttonText: 'En savoir plus',
       },
       {
           id: 6,
-          title: 'Progressive Web App',
+          bgClass: 'bg-gray-200',
+          image: RedIcon,
           text1: 'Créer votre ',
           textColor: 'Progressive Web App ',
+          textColorClass: 'text-red-300',
           text2: 'et augmentez votre satisfaction client',
-          button: 'En savoir plus',
-          image: RedIcon,
-          border: true,
+          buttonBorderClass: 'border-gray-900',
+          buttonText: 'En savoir plus',
       },
   ];
   const referencesIntroContent = [   
@@ -413,8 +421,8 @@ export default function Homepage() {
         solutionsCardContent={solutionsCardContent}
       />
       <References 
-        {...referencesIntroContent}
-        {...referencesCardContent}
+        referencesIntroContent={referencesIntroContent} 
+        referencesCardContent={referencesCardContent} 
       />
       <Expertises {...expertisesCardContent}/>
       <Testimonials slides={testimonialsContent} />

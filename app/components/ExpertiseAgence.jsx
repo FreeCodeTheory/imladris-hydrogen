@@ -55,12 +55,29 @@ export function ExpertiseAgence({expertiseAgenceContent}) {
 
                         <div className="grid grid-cols-3 gap-2 mb-[20px]">
                         {subsection.cards.map((card, j) => (
-                            <div key={j} className="bg-gray-800 text-gray-50 rounded-[40px] w-full h-fit">
-                            <Card 
-                                title={card.title} 
-                                titleColor={card.titleColor} 
-                                content={card.content} 
-                                buttonText={card.buttonText} />
+                            <div key={j} className='bg-gray-800 text-gray-50 rounded-[40px] w-full h-fit'>
+                                <Card 
+                                    key={card.id}
+                                    bgClass={card.bgClass}
+                                    borderClass={j === subsection.cards.length - 1 ? card.borderClass : 'border-none'}
+                                    image={card.image}
+                                    number={card.number}
+                                    title={card.title} 
+                                    titleClass={card.titleClass}
+                                    titleHoverClass={card.titleHoverClass}
+                                    content={card.content} 
+                                    contentClass={card.contentClass}
+                                    text1={card.text1}
+                                    textColor={card.textColor}
+                                    text2={card.text2}
+                                    buttonClass={card.buttonClass}
+                                    buttonHoverClass={card.buttonHoverClass}
+                                    buttonBorderClass={card.buttonBorderClass}
+                                    buttonBorderHoverClass={card.buttonBorderHoverClass}
+                                    buttonText={card.buttonText}
+                                    buttonTextClass={card.buttonTextClass}
+                                    buttonTextHoverClass={card.buttonTextHoverClass}
+                                />
                             </div>
                         ))}
                         </div>
