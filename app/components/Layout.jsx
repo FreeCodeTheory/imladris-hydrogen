@@ -468,40 +468,43 @@ function DesktopHeader({isHome, title, y}) {
       role="banner"
       className={`${isHome ? 'bg-gray-50' : 'bg-contrast/80 text-primary'} ${
         !isHome && y > 50 && 'shadow-lightHeader'
-      } sticky top-0 z-40 hidden h-full h-nav w-full gap-8 px-[120px] 
-        py-4 leading-none backdrop-blur-lg transition duration-300 lg:block`}
+      } sticky top-0 z-40 hidden h-full w-full 
+        leading-none backdrop-blur-lg transition duration-300 
+        2xl:py-[1%] 2xl:px-[8%]
+        xl:py-[2%]  xl:px-[2%]
+        lg:py-[2%]  lg:px-[2%]
+        lg:block`}
     >
       <div className="flex justify-between">
-        <div className="flex items-center gap-20">
+        <div className="flex items-center gap-[10px]">
           <Link to="/" className="text-lg font-bold">
-            {title}
+          <svg width="61" height="62" viewBox="0 0 61 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="0.5" width="61" height="61" rx="30.5" fill="#2C2C2D"/>
+          </svg>
           </Link>
 
-          <nav className="flex h-full items-center gap-10 rounded-[50px] bg-gray-200 p-[4px]">
+          <nav className="flex h-full items-center rounded-[50px] bg-gray-200">
             {menu.map((item) => (
               <div
                 key={item.id}
                 onMouseEnter={() => handleMouseEnter(item.id)}
                 className="relative"
               >
-                <div
-                  className={`rounded-full px-[26px] py-[20px] 
-                              text-[16px] font-medium leading-[20px] tracking-[0.02em]
-                              ${
-                                location.pathname === item.to ? "bg-gray-900 text-gray-50" : "hover:bg-gray-900 text-gray-50"
-                              }`}
-                >
-                  <Link to={item.to} 
-                        className={location.pathname === item.to ? "text-gray-50" : "text-gray-900 hover:text-gray-50"}>
-                    {item.title}
-                  </Link>
-                </div>
+                
+                <Link to={item.to} 
+                      className={`rounded-full px-[26px] py-[20px] 
+                                  text-[16px] font-medium leading-[20px] tracking-[0.02em]
+                                  ${
+                                    location.pathname === item.to ? "bg-gray-900 text-gray-50" : "text-gray-900 hover:bg-gray-900 hover:text-gray-50"
+                                  }`}>
+                  {item.title}
+                </Link>
 
                 {item.children && item.id === activeDropdown && (
                   <div
                     onMouseEnter={() => setActiveDropdown(item.id)}
                     onMouseLeave={() => setActiveDropdown(null)}
-                    className="fixed left-0 mt-4 h-[400px] w-screen rounded-[50px] bg-gray-50 px-[120px] shadow-100"
+                    className="fixed left-0 mt-5 h-[400px] w-screen rounded-[50px] bg-gray-50 px-[120px] shadow-100"
                   >
                     <div
                       className="flex py-1"
@@ -611,7 +614,7 @@ function DesktopHeader({isHome, title, y}) {
                   <div
                     onMouseEnter={() => setActiveDropdown(item.id)}
                     onMouseLeave={() => setActiveDropdown(null)}
-                    className="fixed mt-4 w-[400px] rounded-[40px] bg-gray-50 px-[30px] py-[40px] shadow-100"
+                    className="fixed mt-5 w-[400px] rounded-[40px] bg-gray-50 px-[30px] py-[40px] shadow-100"
                   >
                     <div
                       role="menu"
@@ -638,7 +641,8 @@ function DesktopHeader({isHome, title, y}) {
             ))}
           </nav>
         </div>
-        <button className="rounded-full bg-green-100 px-[26px] py-[20px]">
+        <button className="rounded-full bg-green-100 px-[26px] py-[20px]
+                          lg:p-[10px]">
           <Link
             to="/create-your-site"
             className="text-[16px] font-medium leading-[22px] tracking-[0.02em]"
