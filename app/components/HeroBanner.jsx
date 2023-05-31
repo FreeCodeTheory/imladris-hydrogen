@@ -1,8 +1,8 @@
 export function HeroBanner({title, subtitle, category, button, image, width, mb, mr, backgroundColor}) {
   return (
     <section>
-      <div className={`flex rounded-[50px] ${backgroundColor}`}>
-        <div className="flex flex-col items-start gap-5 h-full mr-[15%] p-[4%]">
+      <div className={`flex rounded-[50px] mx-6 ${backgroundColor}`}>
+        <div className="flex flex-col items-start gap-5 h-full 2xl-only:mr-[15%] p-[4%]">
           <div className='border border-gray-700 rounded-full px-[8px] py-[4px] gap-10 drop-shadow-primary'>
             <h1 className="font-bold text-[11px] tracking-[0.04em] uppercase">{category}</h1>
           </div>
